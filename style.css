@@ -1,5 +1,6 @@
 body
 {
+    font-family: 'Open Sans';
     background-color: rgb(28, 28, 28);
     background-repeat: no-repeat; 
     background-attachment: fixed;
@@ -74,7 +75,9 @@ a:hover{
     color: whitesmoke;
 }
 
+/*Makes footer fixed
 footer{
+    position:fixed;
     height: 150px;
     width: 100%;
     bottom: 0%;

@@ -57,7 +57,7 @@ body {
     padding: 10px 0 10px 10px;
     color: whitesmoke;
     border: 2px rgba(64, 64, 64, 0.3) solid;
-    border-radius: 2px;
+    border-radius: 4px;
     background-image: linear-gradient(to right, rgba(10, 10, 10, 0.1) 50%, rgba(175, 175, 175, 0.05));
     width: 100%;
     margin-top: 10px;
@@ -102,9 +102,8 @@ a:hover{
     color: whitesmoke;
 }
 
-/*Makes footer fixed
 footer{
-    position:fixed;
+    margin-bottom: 0;
     height: 150px;
     width: 100%;
     bottom: 0%;

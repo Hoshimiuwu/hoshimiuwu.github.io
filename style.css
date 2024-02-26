@@ -20,12 +20,27 @@ body {
 
 #lightbar {
     border:none;
-    height: 3px;
+    height: 7px;
     border-bottom: 5px solid rgb(10, 10, 10);
-    box-shadow: 0 25px 30px 0 rgba(27, 137, 255, 0.795);
+    box-shadow: 0 25px 30px 0 rgba(27, 137, 255, 0.9);
     animation-name: fadein;
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
+}
+
+#BackgroundImage{
+    background-image: url("WebsiteBackground.png");
+    image-rendering: pixelated;
+    width: 99.65%;
+    height: 100%;
+    opacity: 10%;
+    position: absolute;
+    top: 0%;
+    background-size: 50%, 50%;
+    overflow: hidden;
+    z-index: -1;
+    background-repeat: repeat-x;
+    filter:grayscale(50%)
 }
 
 #title {
@@ -36,12 +51,13 @@ body {
 }
 
 #rain{
-    background-image: url("rain.gif");
+    background-image: url("snow.gif");
     background-repeat: repeat;
+    background-size: 15%, 15%;
     position: absolute;
     width: 99%;
     height: 99%;
-    opacity: 15%;
+    opacity: 20%;
     z-index: -1;
 }
 
@@ -53,10 +69,21 @@ body {
     grid-template-columns: 700px 300px; 
 }
 
+#hotlink{
+    margin: auto;
+    display:block;
+    width: 75%;
+    background-color: #111;
+    color: white;
+    border-radius: 2px;
+    border: 1px solid whitesmoke;
+    overflow:auto;
+}
+
 .classinator {
     padding: 10px 0 10px 10px;
     color: whitesmoke;
-    border: 2px rgba(64, 64, 64, 0.3) solid;
+    border: 1px rgba(64, 64, 64, 0.3) solid;
     border-radius: 4px;
     background-image: linear-gradient(to right, rgba(10, 10, 10, 0.1) 50%, rgba(175, 175, 175, 0.05));
     width: 100%;
@@ -72,8 +99,16 @@ body {
     background-image: linear-gradient(to left, rgba(10, 10, 10, 0.1) 30%, rgba(175, 175, 175, 0.05));
 }
 
-.classinator h3{
-    padding: 3px;
+.classinator h3 {
+    width: fit-content;
+    padding: 3px 10px 3px 10px;
+    border-left: 5px solid rgb(71, 129, 223);
+    background-image: linear-gradient(45deg, #1e1e1e7d, transparent);
+}
+
+.classinator h3:hover{
+    background-image: linear-gradient(45deg, #fffcfc21, transparent);
+    border-left: 6px solid rgb(255 255 255);
 }
 
 .item {

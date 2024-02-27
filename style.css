@@ -53,6 +53,11 @@ body {
 
 #title img:hover{
     cursor: pointer;
+    filter: brightness(1.5)
+}
+
+#title img:active{
+    filter:invert(1)
 }
 
 #rain{
@@ -83,6 +88,10 @@ body {
     border-radius: 2px;
     border: 1px solid whitesmoke;
     overflow:auto;
+}
+
+#hotlinkimg:hover{
+    filter:brightness(2)
 }
 
 .classinator {
@@ -140,6 +149,7 @@ a:visited{
 
 a:hover{
     color: whitesmoke;
+    font-style: italic;
 }
 
 footer{

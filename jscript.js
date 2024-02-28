@@ -37,3 +37,13 @@ function backwards(){
 
     imageObject.style.backgroundImage = "url(" + imgs[counter] + ")"
 }
+
+number = 0;
+var animations = ['star.gif'];
+
+function character() {
+
+    image = document.getElementById('hiddenimageid');
+    image.src = animations[number];
+
+}

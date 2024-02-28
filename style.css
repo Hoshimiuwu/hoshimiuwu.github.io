@@ -60,7 +60,7 @@ body {
     filter:invert(1)
 }
 
-#rain{
+#snow{
     background-image: url("snow.gif");
     background-repeat: repeat;
     background-size: 20%, 20%;
@@ -69,6 +69,31 @@ body {
     height: 99%;
     opacity: 15%;
     z-index: -1;
+}
+
+#bottomsnow{
+    background-image: url("bottomsnow.gif");
+    background-repeat: repeat;
+    background-size: 20%, 20%;
+    width: 99%;
+    height: 99%;
+    opacity: 15%;
+    z-index: -1;
+}
+
+.board {
+    float: right;
+    cursor: pointer;
+}
+.board:hover{
+    filter: brightness(1.5);
+}
+  
+.board img {
+    display: block;
+    position: absolute;
+    padding-left: 30px;
+    padding-top: 95px;
 }
 
 .container {

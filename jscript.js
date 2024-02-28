@@ -11,18 +11,29 @@ function playAudio() {
 
 let imgs = ["art1.jpg", "art2.jpg", "art3.jpg", "art4.jpg", "art5.jpg"]
 let counter = 0
-let button = document.querySelector("#forwardbutton")
+let fowardbutton = document.querySelector("#forwardbutton")
+let backwardbutton = document.querySelector("#backwardbutton")
 let imageObject = document.querySelector("#gallery")
 
-button.addEventListener("click", forward, false)
+fowardbutton.addEventListener("click", forward, false)
+backwardbutton.addEventListener("click", backwards, false)
 
 function forward(){
-if(counter < imgs.length)
+    if(counter < imgs.length)
     counter++
 
-if(counter >= 5)
-counter = 0
-console.log("cock")
+    if(counter >= 5)
+    counter = 0
 
-imageObject.style.backgroundImage = "url(" + imgs[counter] + ")"
+    imageObject.style.backgroundImage = "url(" + imgs[counter] + ")"
+}
+
+function backwards(){
+    if(counter < imgs.length)
+    counter--
+
+    if(counter <= 0)
+    counter = 4
+
+    imageObject.style.backgroundImage = "url(" + imgs[counter] + ")"
 }

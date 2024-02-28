@@ -9,5 +9,20 @@ function playAudio() {
     sound.play();
 } 
 
-/*document.removeEventListener("click", playAudio)*/
-/*document.addEventListener("click", playAudio)*/
+let imgs = ["art1.jpg", "art2.jpg", "art3.jpg", "art4.jpg", "art5.jpg"]
+let counter = 0
+let button = document.querySelector("#forwardbutton")
+let imageObject = document.querySelector("#gallery")
+
+button.addEventListener("click", forward, false)
+
+function forward(){
+if(counter < imgs.length)
+    counter++
+
+if(counter >= 5)
+counter = 0
+console.log("cock")
+
+imageObject.style.backgroundImage = "url(" + imgs[counter] + ")"
+}

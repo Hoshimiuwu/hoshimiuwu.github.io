@@ -87,11 +87,13 @@ body {
 }
 
 .buttongalleryright{
+    margin: auto;
     grid-column-start: 3;
 }
 
 
 .buttongalleryleft{
+    margin: auto;
     grid-column-start: 1;
 }
 
@@ -109,7 +111,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     display:grid;
-    grid-template-columns: 5% auto 5%;
+    grid-template-columns: 10% auto 10%;
     width: 98.5%;
     height: 390px;
     background-image: url("art1.jpg");

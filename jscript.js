@@ -52,7 +52,7 @@ imageObject.style.backgroundImage = "url(" + imgs[counter] + ")"
 
 async function onlineCheck(){
     let response
-    await fetch("http://116.203.200.86:7950/hoshcheck").then(res => res.json()).then(json => response = JSON.stringify(json));
+    await fetch("https://hoshi.veljkokovacevic.com/hoshcheck").then(res => res.json()).then(json => response = JSON.stringify(json));
     response = parseInt(response)
     console.log(response)
 

@@ -73,20 +73,13 @@ body {
 }
 
 .online{
-    color:#58e;
+    color:rgb(85, 238, 105);
+    text-shadow: 0px 0px 10px rgba(68, 255, 0, 0.792)
 }
 
 .offline {
-    /*
-    border: solid #A00C;
-    border-width: 1px 1px 1px 3px;
-    border-radius: 3px;
-    background: linear-gradient(90deg, #A00F, #A000);
-    color:#F99F;
-    */
-
     color:#EA5;
-    
+    text-shadow: 0px 0px 10px rgba(255, 128, 0, 0.919)
 }
 
 .flexed {

@@ -58,7 +58,7 @@ async function onlineCheck(){
 
     let difference = (Date.now() / 1000) - response
     console.log(difference)
-    let threshold = 900; //15m threshold for online
+    let threshold = 150; //5m threshold for online
     let online = false;
     if(difference > threshold) online = false;
     else online = true;
@@ -78,12 +78,12 @@ async function onlineCheck(){
     difference = parseInt(difference);
 
     if(online) {
+        lastPing.innerHTML = "Last Seen - Now";
         statusBadge.className = "online";
         statusBadge.innerHTML = "Online ¤";
     } else {
+        lastPing.innerHTML = "Last Seen - " + (difference / 60**mult).toFixed(1) + magnitude + " ago";
         statusBadge.className = "offline";
         statusBadge.innerHTML = "Offline ¤";
     }
-
-    lastPing.innerHTML = "Last Seen - " + (difference / 60**mult).toFixed(1) + magnitude + " ago";
 }

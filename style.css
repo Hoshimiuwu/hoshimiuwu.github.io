@@ -173,9 +173,9 @@ body {
     background-position: center;
     display:grid;
     grid-template-columns: 10% auto 10%;
-    width: 98.5%;
-    height: 390px;
-    background-image: url("art1.jpg");
+    width: 98%;
+    height: 400px;
+    background-image: url("art1.png");
     opacity: 90%;
     border-radius: 5px;
 }

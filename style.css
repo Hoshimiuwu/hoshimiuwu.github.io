@@ -25,7 +25,7 @@ body {
     border:none;
     height: 7px;
     border-bottom: 5px solid rgb(10, 10, 10);
-    box-shadow: 0 25px 30px 0 rgba(27, 137, 255, 0.9);
+    box-shadow: 0 25px 30px 0 rgba(27, 137, 255, 0.8);
     animation-name: fadein;
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
@@ -208,7 +208,7 @@ body {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
-    box-shadow: 0px 0px 10px rgba(70, 82, 254, 0.25);
+    box-shadow: 0px 0px 5px rgba(70, 82, 254, 0.3);
     animation-name: fadein;
     animation-duration: 1s;
     animation-timing-function: ease-in;

@@ -9,7 +9,7 @@ function playAudio() {
     sound.play();
 } 
 
-let imgs = ["art6.jpg", "art1.jpg", "art2.jpg", "art3.jpg", "art4.jpg", "art5.jpg"]
+let imgs = ["art6.jpg", "art7.jpg", "art1.jpg", "art2.jpg", "art3.jpg", "art4.jpg", "art5.jpg"]
 let counter = 0
 let fowardbutton = document.querySelector("#forwardbutton")
 let backwardbutton = document.querySelector("#backwardbutton")
@@ -22,7 +22,7 @@ function forward(){
     if(counter < imgs.length)
     counter++
 
-    if(counter >= 6)
+    if(counter >= 7)
     counter = 0
 
     imageObject.style.backgroundImage = "url(" + imgs[counter] + ")"
@@ -33,7 +33,7 @@ function backwards(){
     counter--
 
     if(counter < 0)
-    counter = 5
+    counter = 6
 
     imageObject.style.backgroundImage = "url(" + imgs[counter] + ")"
 }

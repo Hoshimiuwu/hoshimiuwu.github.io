@@ -134,6 +134,36 @@ body {
     padding-top: 95px;
 }
 
+.flower {
+    float: left;
+}
+
+
+.flower img{
+    display: block;
+    position: absolute;
+    padding-top: 20px;
+    padding-left: 500px;
+    filter: brightness(2);
+}
+
+.flower:hover{
+    filter: blur(2px);
+}
+
+.flowerpillar {
+    float: left;
+}
+
+.flowerpillar img{
+    display: block;
+    position: absolute;
+    width: 500px;
+    height: 10px;
+    padding-top: 45px;
+    filter: blur(1px) drop-shadow(0px 2px 2px rgba(196, 196, 196, 0.788));
+}
+
 .container {
     display: grid;
     margin: auto;
@@ -190,7 +220,6 @@ body {
 #gallery:hover{
     opacity: 100%;
 }
-
 #hotlink{
     margin: auto;
     display:block;

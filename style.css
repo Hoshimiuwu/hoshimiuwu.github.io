@@ -8,7 +8,6 @@
     to{filter:brightness(1) opacity(0.5)}
 }
 
-
 img{
     animation-name: fadein;
     animation-duration: 1s;
@@ -77,8 +76,8 @@ body {
 }
 
 .online{
-    color:rgb(85, 238, 105);
-    text-shadow: 0px 0px 10px rgba(68, 255, 0, 0.792)
+    color:rgb(191, 173, 242);
+    text-shadow: 1px 1px 10px rgb(98, 1, 255)
 }
 
 .offline {

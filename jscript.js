@@ -58,7 +58,7 @@ async function onlineCheck(){
 
     let difference = (Date.now() / 1000) - response
     console.log(difference)
-    let threshold = 150; //5m threshold for online
+    let threshold = 150; 
     let online = false;
     if(difference > threshold) online = false;
     else online = true;

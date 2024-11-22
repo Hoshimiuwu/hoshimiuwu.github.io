@@ -81,8 +81,8 @@ body {
 }
 
 .offline {
-    color:#EA5;
-    text-shadow: 0px 0px 10px rgba(255, 128, 0, 0.919)
+    color:rgb(238, 116, 85);
+    text-shadow: 0px 0px 10px rgba(255, 94, 0, 0.919)
 }
 
 .flexed {

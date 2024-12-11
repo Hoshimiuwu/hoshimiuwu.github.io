@@ -39,7 +39,7 @@ body {
     background-image: url("../snow.gif");
     background-repeat: repeat;
     background-size: 20%, 20%;
-    position:fixed;
+    position: fixed;
     width: 99%;
     height: 99%;
     opacity: 15%;

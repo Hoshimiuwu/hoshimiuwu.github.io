@@ -1,0 +1,41 @@
+body {
+    font-family: 'Montserrat';
+    background-color: rgb(10, 10, 10);
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover; 
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#BackgroundImage{
+    background-color: rgb(13, 13, 13);
+    image-rendering: pixelated;
+    width: 99.65%;
+    height: 100%;
+    opacity: 25%;
+    position: absolute;
+    top: 0%;
+    background-size: 100%;
+    overflow: hidden;
+    z-index: 1;
+    background-repeat: repeat-x;
+    filter:grayscale(50%)
+}
+
+#snow{
+    background-image: url("../snow.gif");
+    background-repeat: repeat;
+    background-size: 20%, 20%;
+    position:fixed;
+    width: 99%;
+    height: 99%;
+    opacity: 15%;
+    z-index: -1;
+    filter:invert(2);
+}
+
+#classinator {
+    text-align: center;
+}

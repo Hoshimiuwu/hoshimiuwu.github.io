@@ -38,18 +38,6 @@ function backwards(){
     imageObject.style.backgroundImage = "url(" + imgs[counter] + ")"
 }
 
-number = 0;
-var animations = ['star.gif'];
-
-function character() {
-
-    image = document.getElementById('hiddenimageid');
-    image.src = animations[number];
-
-
-imageObject.style.backgroundImage = "url(" + imgs[counter] + ")"
-}
-
 async function onlineCheck(){
     let response
     await fetch("https://hoshi.veljkokovacevic.com/hoshcheck").then(res => res.json()).then(json => response = JSON.stringify(json));
@@ -87,6 +75,7 @@ async function onlineCheck(){
         statusBadge.innerHTML = "Offline ¤";
     }
 }
+
 var hoverArea = document.getElementById('hoverElement');
 var audio = document.getElementById('audio');
 audio.volume = 0.1;

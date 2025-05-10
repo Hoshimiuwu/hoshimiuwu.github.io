@@ -261,9 +261,20 @@ body {
     background-image: linear-gradient(45deg, #1e1e1e7d, transparent);
 }
 
+
+
 .classinator h3:hover{
     background-image: linear-gradient(45deg, #fffcfc21, transparent);
     border-left: 6px solid rgb(255 255 255);
+
+    .notes{
+        display: block;
+    }
+}
+
+.classinator a h3 .notes{
+    display: none;
+    font-size: 7pt;
 }
 
 .item {

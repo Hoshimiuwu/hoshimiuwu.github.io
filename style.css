@@ -15,7 +15,7 @@ img{
 }
 
 body {
-    font-family: 'Montserrat';
+    font-family: 'Sansation';
     background-color: rgb(10, 10, 10);
     background-repeat: no-repeat; 
     background-attachment: fixed;
@@ -24,16 +24,65 @@ body {
     overflow-x: hidden;
 }
 
+#backdrop {
+    animation: none;
+    z-index: 10;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18pt;
+    width:100%;
+    height:100%;
+    position:fixed;
+    color: white;
+    margin:0;
+    backdrop-filter:blur(20px);
+}
+
+#backdrop div{
+    vertical-align: middle;
+    width:fit-content;
+    height:fit-content;
+    padding: 15px 25px;
+    transform:skew(5deg);
+    border-bottom:10px solid #ffffff80;
+    border-left: 10px solid #ffffff50;
+    border-right: 1px solid #ffffff50;
+    border-top: 1px solid #ffffff50;
+    font-weight: bolder;
+    background-image: linear-gradient(180deg, #ffffff10,#050304);
+    user-select: none;
+    cursor:pointer;
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+#backdrop div:hover{
+    background-image: linear-gradient(180deg, #ffffff40, #050304);
+    transform:skew(5deg);
+    border-left: 3px solid #ffffff50;
+    border-bottom:3px solid #ffffff80;
+    transition-duration: 0.2s;
+    transition-property: all;
+}
+#backdrop div:active {
+    border: 1px solid #a5ffb250;
+    border-bottom: 1px solid #a5ffb2ff;
+    filter:hue-rotate(300deg);
+    background-image: linear-gradient(180deg, #a5ffb2ff, #050304);
+    transition-duration: 0s; 
+}
+
 #lightbar {
     border:none;
     height: 7px;
     border-bottom: 5px solid rgb(10, 10, 10);
-    box-shadow: 0 25px 30px 0 rgba(27, 137, 255, 0.8);
+    box-shadow: 0 35px 40px 0 rgba(193, 219, 255, 0.555);
     animation-name: fadein;
-    animation-duration: 5s;
+    animation-duration: 7s;
     animation-timing-function: ease-in-out;
 }
 
+/* old background
 #BackgroundImage{
     background-image: url("WebsiteBackground.png");
     image-rendering: pixelated;
@@ -42,11 +91,25 @@ body {
     opacity: 10%;
     position: absolute;
     top: 0%;
-    background-size: 50%, 50%;
+
     overflow: hidden;
     z-index: -1;
     background-repeat: repeat-x;
     filter:grayscale(50%)
+} 
+*/
+
+#BackgroundImage{
+    background-image: url("WebsiteBackground.jpg");
+    image-rendering: pixelated;
+    width: 99.65%;
+    height: 100%;
+    opacity: 6%;
+    position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    background-color: black;
 }
 
 #title {
@@ -76,8 +139,8 @@ body {
 }
 
 .online{
-    color:rgb(191, 173, 242);
-    text-shadow: 1px 1px 10px rgb(98, 1, 255)
+    color:rgb(255, 255, 255);
+    text-shadow: 1px 1px 10px rgb(5, 64, 255)
 }
 
 .offline {
@@ -136,7 +199,6 @@ body {
 .flower {
     float: left;
 }
-
 
 .flower img{
     display: block;
@@ -261,8 +323,6 @@ body {
     background-image: linear-gradient(45deg, #1e1e1e7d, transparent);
 }
 
-
-
 .classinator h3:hover{
     background-image: linear-gradient(45deg, #fffcfc21, transparent);
     border-left: 6px solid rgb(255 255 255);
@@ -280,14 +340,6 @@ body {
 .item {
     display:flex;
     flex-direction:column;
-}
-
-.item-1 {
-    grid-column-start: 1;
-}
-
-.item-2 {
-    grid-column-start: 2;
 }
 
 a {

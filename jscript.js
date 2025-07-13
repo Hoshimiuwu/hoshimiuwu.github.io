@@ -85,3 +85,8 @@ hoverArea.onmouseover= function(){
 hoverArea.onmouseout= function(){
     audio.pause();
 }    
+
+async function reveal() {
+    startButton.remove()
+    backdrop.remove()
+}

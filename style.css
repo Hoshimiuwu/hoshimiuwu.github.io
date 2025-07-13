@@ -43,18 +43,16 @@ body {
     vertical-align: middle;
     width:fit-content;
     height:fit-content;
-    padding: 15px 25px;
+    padding: 25px 30px;
     transform:skew(5deg);
-    border-bottom:10px solid #ffffff80;
-    border-left: 10px solid #ffffff50;
-    border-right: 1px solid #ffffff50;
-    border-top: 1px solid #ffffff50;
+    font-size: larger;
     font-weight: bolder;
     background-image: linear-gradient(180deg, #ffffff10,#050304);
     user-select: none;
     cursor:pointer;
     transition-duration: 0.2s;
     transition-property: all;
+    box-shadow: 10px 10px 15px rgb(0, 0, 0);
 }
 #backdrop div:hover{
     background-image: linear-gradient(180deg, #ffffff40, #050304);
@@ -81,23 +79,6 @@ body {
     animation-duration: 7s;
     animation-timing-function: ease-in-out;
 }
-
-/* old background
-#BackgroundImage{
-    background-image: url("WebsiteBackground.png");
-    image-rendering: pixelated;
-    width: 99.65%;
-    height: 100%;
-    opacity: 10%;
-    position: absolute;
-    top: 0%;
-
-    overflow: hidden;
-    z-index: -1;
-    background-repeat: repeat-x;
-    filter:grayscale(50%)
-} 
-*/
 
 #BackgroundImage{
     background-image: url("WebsiteBackground.jpg");
@@ -127,7 +108,6 @@ body {
 #title img:active{
     filter:invert(1)
 }
-
 
 #statusPane h2,h4,h5{
     margin:0.5rem;

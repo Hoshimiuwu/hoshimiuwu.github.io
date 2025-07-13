@@ -18,13 +18,14 @@
     <meta content="https://hoshimiuwu.github.io/" property="og:url" />
     <meta content="https://github.com/Hoshimiuwu/hoshimiuwu.github.io/blob/main/pfp.png?raw=true" property="og:image"/>
     <meta content="#43B581" data-react-helmet="true" name="theme-color" />
-
+    <script src="https://cdn.jsdelivr.net/npm/howler@2.2.4/dist/howler.min.js"></script>
 </head>
 
 <body>
 
+
 <div id="backdrop">
-    <div id="startButton" class="btn" onclick="reveal(); flip('tile')">PLAY</div>
+    <div id="startButton" class="btn" onclick="reveal(); titleSound()">PLAY</div>
 </div>
 
 <div id="BackgroundImage"></div>
@@ -94,8 +95,8 @@
         <div class="classinator">
             <span style="font-size: larger; text-decoration: underline;">My art!:</span><br><br>
             <div id="gallery">
-                <img class="button buttongalleryleft" id="backwardbutton" src="buttonleft.png"></img>
-                <img class="button buttongalleryright" id="forwardbutton" src="button.png"></img>
+                <img class="button buttongalleryleft" id="backwardbutton" src="buttonleft.png" onclick="bongoSound()"></img>
+                <img class="button buttongalleryright" id="forwardbutton" src="button.png" onclick="bongoSound()"></img>
             </div>
             <br>
         </div>

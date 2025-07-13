@@ -18,6 +18,33 @@ let imageObject = document.querySelector("#gallery")
 fowardbutton.addEventListener("click", forward, false)
 backwardbutton.addEventListener("click", backwards, false)
 
+var soundLibrary = {
+            'bongo': createSound('bongo.wav'),
+            'title': createSound('title.wav'),
+        }
+
+async function flip(name){
+            soundLibrary[name].play();
+        }
+
+        function createSound(file, extras){
+            let howlBase = {
+                src:['aud/'+file]
+            }
+            
+            return new Howl(Object.assign({}, howlBase, extras))
+        }
+  
+function titleSound(){
+    soundLibrary['title'].volume(0.1)
+    flip('title')
+}
+
+function bongoSound(){
+    soundLibrary['bongo'].volume(0.2)
+    flip('bongo')
+}
+
 function forward(){
     if(counter < imgs.length)
     counter++

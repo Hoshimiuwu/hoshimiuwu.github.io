@@ -1,13 +1,4 @@
-var sound = document.createElement('audio')
-sound.id = 'audio'
-sound.src = 'mmm.mp3'
-sound.type = 'audio/mp3'
-sound.volume = 0.25
-document.body.appendChild(sound)
 onlineCheck()
-function playAudio() {
-    sound.play();
-} 
 
 let imgs = ["art6.jpg", "art7.jpg", "art1.jpg", "art2.jpg", "art3.jpg", "art4.jpg", "art5.jpg"]
 let counter = 0
@@ -21,6 +12,7 @@ backwardbutton.addEventListener("click", backwards, false)
 var soundLibrary = {
             'bongo': createSound('bongo.wav'),
             'title': createSound('title.wav'),
+            'hover': createSound('hover.wav'),
         }
 
 async function flip(name){
@@ -34,6 +26,11 @@ async function flip(name){
             
             return new Howl(Object.assign({}, howlBase, extras))
         }
+
+function hoverSound(){
+    soundLibrary['hover'].volume(0.03)
+    flip('hover')
+}
   
 function titleSound(){
     soundLibrary['title'].volume(0.05)
@@ -102,16 +99,6 @@ async function onlineCheck(){
         statusBadge.innerHTML = "Offline ¤";
     }
 }
-
-var hoverArea = document.getElementById('hoverElement');
-var audio = document.getElementById('audio');
-audio.volume = 0.1;
-hoverArea.onmouseover= function(){
-    audio.play();
-}
-hoverArea.onmouseout= function(){
-    audio.pause();
-}    
 
 async function reveal() {
     startButton.remove()

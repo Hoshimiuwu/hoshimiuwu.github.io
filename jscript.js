@@ -13,6 +13,7 @@ var soundLibrary = {
             'bongo': createSound('bongo.wav'),
             'title': createSound('title.wav'),
             'hover': createSound('hover.wav'),
+            'mmm': createSound('mmm.mp3'),
         }
 
 async function flip(name){
@@ -28,7 +29,7 @@ async function flip(name){
         }
 
 function hoverSound(){
-    soundLibrary['hover'].volume(0.03)
+    soundLibrary['hover'].volume(0.025)
     flip('hover')
 }
   
@@ -99,6 +100,16 @@ async function onlineCheck(){
         statusBadge.innerHTML = "Offline ¤";
     }
 }
+
+var hoverArea = document.getElementById('hoverElement');
+var audio = document.getElementById('audio');
+audio.volume = 0.1;
+hoverArea.onmouseover= function(){
+    audio.play();
+}
+hoverArea.onmouseout= function(){
+    audio.pause();
+}    
 
 async function reveal() {
     startButton.remove()

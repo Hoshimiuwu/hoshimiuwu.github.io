@@ -163,10 +163,9 @@ body {
 
 .star {
     float: right;
-    cursor: pointer;
 }
 .star:hover{
-    filter: brightness(1.5);
+    filter: brightness(3);
 }
   
 .star img {
@@ -186,10 +185,6 @@ body {
     padding-top: 17px;
     margin-left: 500px;
     filter: brightness(2) blur(1px);
-}
-
-.flower:hover{
-    filter: blur(2px);
 }
 
 .flowerpillar {

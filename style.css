@@ -43,11 +43,11 @@ body {
     vertical-align: middle;
     width:fit-content;
     height:fit-content;
-    padding: 25px 30px;
+    padding: 35px 40px;
     transform:skew(5deg);
     font-size: larger;
     font-weight: bolder;
-    background-image: linear-gradient(180deg, #ffffff10,#050304);
+    background-image: linear-gradient(180deg, #ffffff00,#050304b0);
     user-select: none;
     cursor:pointer;
     transition-duration: 0.2s;

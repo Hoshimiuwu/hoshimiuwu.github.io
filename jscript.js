@@ -36,7 +36,7 @@ async function flip(name){
         }
   
 function titleSound(){
-    soundLibrary['title'].volume(0.1)
+    soundLibrary['title'].volume(0.05)
     flip('title')
 }
 

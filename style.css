@@ -85,7 +85,7 @@ body {
     image-rendering: pixelated;
     width: 99.65%;
     height: 100%;
-    opacity: 6%;
+    opacity: 8%;
     position: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -102,7 +102,7 @@ body {
 
 #title img:hover{
     cursor: pointer;
-    filter: brightness(1.5)
+    filter: brightness(2) drop-shadow(10px 10px 4px #000000);
 }
 
 #title img:active{

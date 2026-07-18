@@ -1,13 +1,41 @@
 onlineCheck()
 
-let imgs = ["art6.jpg", "art7.jpg", "art1.jpg", "art2.jpg", "art3.jpg", "art4.jpg", "art5.jpg"]
+let artCategories = {
+    1: ["GenshinRender1.jpg", "GenshinRender2.jpg",],
+    2: ["art6.jpg", "art7.jpg", "art1.jpg", "art2.jpg", "art3.jpg"],
+    3: ["art4.jpg", "art5.jpg"]
+}
+let activeCategory = 1
+let imgs = artCategories[activeCategory]
 let counter = 0
 let fowardbutton = document.querySelector("#forwardbutton")
 let backwardbutton = document.querySelector("#backwardbutton")
 let imageObject = document.querySelector("#gallery")
 
+if (imageObject && imgs.length > 0) {
+    imageObject.style.backgroundImage = "url(" + imgs[counter] + ")"
+}
+
 fowardbutton.addEventListener("click", forward, false)
 backwardbutton.addEventListener("click", backwards, false)
+
+function selectArtCategory(category) {
+    if (!artCategories[category]) return
+
+    soundLibrary['bongo'].volume(0.3)
+    flip('bongo')
+    activeCategory = category
+    imgs = artCategories[category]
+    counter = 0
+
+    if (imageObject && imgs.length > 0) {
+        imageObject.style.backgroundImage = "url(" + imgs[counter] + ")"
+    }
+
+    document.querySelectorAll('.category-tab').forEach(tab => {
+        tab.classList.toggle('active', tab.id === `category-tab-${category}`)
+    })
+}
 
 var soundLibrary = {
             'bongo': createSound('bongo.wav'),
@@ -44,22 +72,22 @@ function bongoSound(){
 }
 
 function forward(){
-    if(counter < imgs.length)
+    if (imgs.length === 0) return
+
     counter++
-
-    if(counter >= 7)
-    counter = 0
-
+    if (counter >= imgs.length) {
+        counter = 0
+    }
     imageObject.style.backgroundImage = "url(" + imgs[counter] + ")"
 }
 
 function backwards(){
-    if(counter < imgs.length)
+    if (imgs.length === 0) return
+
     counter--
-
-    if(counter < 0)
-    counter = 6
-
+    if (counter < 0) {
+        counter = imgs.length - 1
+    }
     imageObject.style.backgroundImage = "url(" + imgs[counter] + ")"
 }
 

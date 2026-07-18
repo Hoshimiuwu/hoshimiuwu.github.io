@@ -1,3 +1,4 @@
+
 @keyframes fadein {
     from{opacity: 0;}
     to{opacity: 1;}
@@ -72,9 +73,8 @@ body {
 
 #lightbar {
     border:none;
-    height: 7px;
-    border-bottom: 5px solid rgb(10, 10, 10);
-    box-shadow: 0 35px 40px 0 rgba(193, 219, 255, 0.555);
+    height: 3px;
+    border-bottom: 5px solid rgba(0, 0, 0, 0);
     animation-name: fadein;
     animation-duration: 7s;
     animation-timing-function: ease-in-out;
@@ -219,6 +219,38 @@ body {
     filter:drop-shadow(0px 2px 4px rgba(197, 197, 197, 0.5))
 }
 
+.category-selector{
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+.category-tab{
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.1;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 5px;
+    background: rgba(0,0,0,0.35);
+    color: whitesmoke;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-tab:hover,
+.category-tab:focus{
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-1px);
+}
+
+.category-tab.active{
+    background: rgba(255,255,255,0.16);
+    border-color: rgba(255,255,255,0.72);
+    box-shadow: 0 0 12px rgba(255,255,255,0.1);
+}
+
 .buttongalleryright{
     margin: auto;
     grid-column-start: 3;
@@ -284,6 +316,12 @@ body {
     animation-name: fadein;
     animation-duration: 1s;
     animation-timing-function: ease-in;
+}
+
+.section-heading {
+    display: block;
+    text-align: center;
+    margin-bottom: 4px;
 }
 
 .gright{
